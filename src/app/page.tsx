@@ -6,13 +6,7 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { services, testimonials, welcomeSection } from './constants';
-import welcome1 from "../../assets/welcome1.avif";
-import welcome2 from "../../assets/welcome2.avif";
-import welcome3 from "../../assets/welcome3.avif";
-import welcome4 from "../../assets/welcome4.avif";
-import welcome5 from "../../assets/welcome5.avif";
-import welcome6 from "../../assets/welcome6.avif";
-import welcome7 from "../../assets/welcome7.avif";
+import { welcome1, welcome2, welcome3, welcome4, welcome5, welcome6, welcome7 } from '../../assets/exports';
 
 const responsive = {
   superLargeDesktop: {

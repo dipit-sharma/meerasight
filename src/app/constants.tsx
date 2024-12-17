@@ -5,6 +5,8 @@ import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
+import { vaibhavi, rajkumar, rajkumarsharma, sunil, pradeep2, trinabh, nirmal, jitendra, vanshika } from "../../assets/exports"
+
 const welcomeSection = {
     title: "Welcome to MEERASIGHT",
     subtitle: "Expert Eye Care Solutions",
@@ -41,50 +43,50 @@ const testimonials = {
         {
             name: "Ms. Vanshika Yadav",
             description: "I was facing problems in vision in Classroom. Dr. Sonia Sharma treated me successfully. She is very soft spoken and treated me politely.",
-            image: "" // Dipit
+            image: vanshika
 
         },
         {
             name: "Ms. Vaibhavi Sathi",
             description: "I got my treatment of Accute dryness & itching in my eyes by Dr Sonia Sharma. I found her to be extremely patient & humble which helped me massively in the treatment process. Would highly recommend her for any eye treatment.",
-            image: "" // Dipit
+            image: vaibhavi
         },
         {
             name: "Mr. Jitendra Malik",
             description: "I  had a commendable experience. It was nice meeting Dr Sonia Sharma. I am highly satisfied with treatment offered.",
-            image: "" // Dipit
+            image: jitendra
         },
         {
             name: "Mr. Sunil Bhalla",
             description: "I got my both eyes operated for Cataract and my daughter's cosmetic surgery from Dr. Sonia Sharma. She answered all my queries and eased my anxiety during surgery and made me comfortable. I am very satisfied the way she does her job and would recommend to others as well.",
-            image: "" // Dipit
+            image: sunil
 
         },
         {
             name: "Mr. Raj Kumar",
             description: "I got my treatment done by Dr Sonia Sharma. She gave me proper treatment & guidance to resolve my problems. She is highly softspoken & gives very good guidance.",
-            image: "" // Dipit
+            image: rajkumar
         },
         {
             name: "Mr. Raj Kumar Sharma",
             description: "I got my Eye treatment & operation done by Dr Sonia Sharma. She performed my surgery successfully & also gave me proper treatment. I would highly recommend her for any Eye treatment.",
-            image: "" // Dipit
+            image: rajkumarsharma
 
         },
         {
             name: "Mrs. Nirmal",
             description: "I got my Glucoma treatment done by Dr Sonia Sharma and am highly satisfied from her treatment methodologies.",
-            image: "" // Dipit
+            image: nirmal
         },
         {
             name: "Mr. Pradeep Mathur",
             description: "I got my Eye-Irritation treatment done by Dr Sonia Sharma. The diagnosis done was perfect & treatment has worked wonders. I would like to recommend my friends and relatives to refer her for any eye treatment.",
-            image: "" // Dipit
+            image: pradeep2
         },
         {
             name: "Mr. Trinabh Singh",
             description: "Underwent treatment of Ocular hypertension. Dr Sonia Sharma's clinic is very well equipped, very clean and she cleared all my queries.",
-            image: "" // Dipit
+            image: trinabh
         }
     ]
 }

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import meeralogo from '../../assets/meeralogo.gif'
+import { meeralogo } from '../../assets/exports'
 import { Box } from "@mui/material";
 
 export default function MeeraLogo() {
