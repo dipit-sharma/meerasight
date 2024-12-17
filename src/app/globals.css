@@ -5,6 +5,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --theme-text-color: rgb(108, 35, 104);
+  --theme-text-color-light: #6C2368;
+  --theme-bg-color: rgb(137, 75, 134);
+  --theme-bg-color-light: #D274CD;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +22,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  width: "100%";
+  max-width: 1000px;
+  margin: auto;
 }
