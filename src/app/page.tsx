@@ -6,20 +6,27 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { services, testimonials, welcomeSection } from './constants';
+import welcome1 from "../../assets/welcome1.avif";
+import welcome2 from "../../assets/welcome2.avif";
+import welcome3 from "../../assets/welcome3.avif";
+import welcome4 from "../../assets/welcome4.avif";
+import welcome5 from "../../assets/welcome5.avif";
+import welcome6 from "../../assets/welcome6.avif";
+import welcome7 from "../../assets/welcome7.avif";
 
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 5
+    items: 1
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3
+    items: 1
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 2
+    items: 1
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -29,7 +36,7 @@ const responsive = {
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="home">
       <Welcome />
       <Services />
       <Testimonials />
@@ -39,32 +46,28 @@ const Home = () => {
 }
 
 const Welcome = () => {
-  return <Box>
+  const images = [welcome1, welcome2, welcome3, welcome4, welcome5, welcome6, welcome7]
+  return <Box className="welcome">
     <section>
       <Carousel
+        centerMode={false}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite
         autoPlay
         autoPlaySpeed={2000}
         transitionDuration={500}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-      // customRightArrow={<div></div>}
-      // customLeftArrow={<div></div>}
+        removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+        slidesToSlide={1}
       >
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-        <div>Item 4</div>
-        {/* 
-        <div>
-          <Image width={150} height={150} alt="random cat image" src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" />
-          <p className="legend">Legend 3</p>
-        </div> */}
+        {images.map((val, index) => <div className='carouselImageBox' key={index}>
+          <Image layout='fill' alt="welcome carousel image" src={val} />
+        </div>)}
+
       </Carousel>
     </section>
 
-    <section>
+    <section className='content'>
       <h1>{welcomeSection.title}</h1>
       <h4>{welcomeSection.subtitle}</h4>
     </section>
@@ -135,7 +138,7 @@ const Testimonials = () => {
 }
 
 const Location = () => {
-  return <div className="relative h-[400px] w-[600px]">
+  return <div className="location">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.5207755392807!2d77.09466657500766!3d28.614150084916076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04ab79455a29%3A0x33bfb65fb9809a2d!2s14%2C%20Mall%20Rd%2C%20Near%20Cherubs%20Play%20Schoo%2C%20Block%20C5C%2C%20Janakpuri%2C%20Delhi%2C%20110058!5e0!3m2!1sen!2sin!4v1734440118904!5m2!1sen!2sin"
       width="100%"
