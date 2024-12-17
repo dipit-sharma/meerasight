@@ -1,3 +1,9 @@
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import XIcon from '@mui/icons-material/X';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const welcomeSection = {
     title: "Welcome to MEERASIGHT",
@@ -86,27 +92,27 @@ const testimonials = {
 const footer = {
     links: [
         {
-            icon: '',
+            icon: <WhatsAppIcon className='icon' />,
             link: 'https://api.whatsapp.com/send/?phone=917428728458&text&type=phone_number&app_absent=0' // whatsapp
         },
         {
-            icon: '',
+            icon: <FacebookIcon className='icon' />,
             link: 'https://www.facebook.com/MeeraSighteyeclinic/' //fb
         },
         {
-            icon: '',
+            icon: <InstagramIcon className='icon' />,
             link: 'https://www.instagram.com/meera_sight/' // insta
         },
         {
-            icon: '',
+            icon: <XIcon className='icon' />,
             link: 'https://twitter.com/MeeraSight' // twitter
         },
         {
-            icon: '',
+            icon: <LinkedInIcon className='icon' />,
             link: 'https://www.linkedin.com/in/meerasight/' // linkedin
         },
         {
-            icon: '',
+            icon: <YouTubeIcon className='icon' />,
             link: 'https://www.youtube.com/channel/UCoEM8sMaNUdwedYXpOQDY_A' // youtube
         },
     ],

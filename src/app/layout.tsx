@@ -36,8 +36,14 @@ export default function RootLayout({
           <AppBar />
         </header>
         {children}
-        <footer>
-          {footer.links.map((val, index) => <a key={index} href={val.link} target="_blank">{val.link || val.icon}</a>)}
+        <footer className="footer">
+          <section className="icons">
+            {footer.links.map((val, index) => <a key={index} href={val.link} target="_blank">
+              <div className="iconBox">
+                {val.icon}
+              </div>
+            </a>)}
+          </section>
           <Typography>
             {footer.text}
           </Typography>
