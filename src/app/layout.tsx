@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import MeeraLogo from "@/components/MeeraLogo";
 import AppBar from "@/components/AppBar";
+import { Typography } from "@mui/material";
+import { footer } from "./constants";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +36,12 @@ export default function RootLayout({
           <AppBar />
         </header>
         {children}
+        <footer>
+          {footer.links.map((val, index) => <a key={index} href={val.link} target="_blank">{val.link || val.icon}</a>)}
+          <Typography>
+            {footer.text}
+          </Typography>
+        </footer>
       </body>
     </html>
   );
