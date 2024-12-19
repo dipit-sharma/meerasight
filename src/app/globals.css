@@ -4,6 +4,11 @@
 
 :root {
   --background: #ffffff;
+  --foreground: #171717;
+  --theme-text-color: rgb(108, 35, 104);
+  --theme-text-color-light: #6C2368;
+  --theme-bg-color: rgb(137, 75, 134);
+  --theme-bg-color-light: #D274CD;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,4 +34,90 @@
 body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* footer css */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-direction: column;
+  margin: 5rem 0rem;
+}
+
+.footer .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+.footer .iconBox {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--theme-text-color);
+  display: grid;
+  place-items: center;
+}
+
+.footer .icon {
+  color: white;
+}
+
+/* HOME */
+
+.home .location {
+  height: 400px;
+  width: 100%;
+  margin: 5rem 0rem;
+}
+
+.home .welcome {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  margin: 2rem 0rem;
+}
+
+.home .welcome section {
+  flex: 1;
+  height: 250px;
+  overflow: hidden;
+}
+
+.home .welcome section div,
+.home .welcome .carouselImageBox {
+  height: 100%;
+  width: 100%;
+}
+
+.home .welcome section ul {
+  height: 100%;
+}
+
+.home .welcome .content {
+  text-align: center;
+}
+
+.home .welcome .content h4 {
+  font-size: 1.25rem;
+  font-family: futura-lt-w01-book, sans-serif;
+  line-height: 1.67em;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+  color: var(--theme-text-color);
+}
+
+.home .welcome .content h1 {
+  font-size: 4.5rem;
+  color: var(--theme-text-color);
+  line-height: normal;
+  font-style: normal;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
 }
