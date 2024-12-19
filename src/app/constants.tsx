@@ -43,18 +43,21 @@ const testimonials = {
         {
             name: "Ms. Vanshika Yadav",
             description: "I was facing problems in vision in Classroom. Dr. Sonia Sharma treated me successfully. She is very soft spoken and treated me politely.",
-            image: vanshika
+            image: vanshika,
+            link: "https://www.youtube.com/watch?v=CqwCe2H6ves&feature=youtu.be"
 
         },
         {
             name: "Ms. Vaibhavi Sathi",
             description: "I got my treatment of Accute dryness & itching in my eyes by Dr Sonia Sharma. I found her to be extremely patient & humble which helped me massively in the treatment process. Would highly recommend her for any eye treatment.",
-            image: vaibhavi
+            image: vaibhavi,
+            link: "https://www.youtube.com/watch?v=xQY2NiGshgg&feature=youtu.be"
         },
         {
             name: "Mr. Jitendra Malik",
             description: "I  had a commendable experience. It was nice meeting Dr Sonia Sharma. I am highly satisfied with treatment offered.",
-            image: jitendra
+            image: jitendra,
+            link: ""
         },
         {
             name: "Mr. Sunil Bhalla",
@@ -65,28 +68,33 @@ const testimonials = {
         {
             name: "Mr. Raj Kumar",
             description: "I got my treatment done by Dr Sonia Sharma. She gave me proper treatment & guidance to resolve my problems. She is highly softspoken & gives very good guidance.",
-            image: rajkumar
+            image: rajkumar,
+            link: "https://www.youtube.com/watch?v=RTN3gTFsEEo&feature=youtu.be"
         },
         {
             name: "Mr. Raj Kumar Sharma",
             description: "I got my Eye treatment & operation done by Dr Sonia Sharma. She performed my surgery successfully & also gave me proper treatment. I would highly recommend her for any Eye treatment.",
-            image: rajkumarsharma
+            image: rajkumarsharma,
+            link: "https://www.youtube.com/watch?v=ICYH9s-h2ws&feature=youtu.be"
 
         },
         {
             name: "Mrs. Nirmal",
             description: "I got my Glucoma treatment done by Dr Sonia Sharma and am highly satisfied from her treatment methodologies.",
-            image: nirmal
+            image: nirmal,
+            link: "https://www.youtube.com/watch?v=ktb0-iVkEQU"
         },
         {
             name: "Mr. Pradeep Mathur",
             description: "I got my Eye-Irritation treatment done by Dr Sonia Sharma. The diagnosis done was perfect & treatment has worked wonders. I would like to recommend my friends and relatives to refer her for any eye treatment.",
-            image: pradeep2
+            image: pradeep2,
+            link: "https://www.youtube.com/watch?v=HlwEAQkXh-c&feature=youtu.be"
         },
         {
             name: "Mr. Trinabh Singh",
             description: "Underwent treatment of Ocular hypertension. Dr Sonia Sharma's clinic is very well equipped, very clean and she cleared all my queries.",
-            image: trinabh
+            image: trinabh,
+            link: "https://www.youtube.com/watch?v=sIysnikDtTk&feature=youtu.be"
         }
     ]
 }

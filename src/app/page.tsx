@@ -69,8 +69,8 @@ const Welcome = () => {
 }
 
 const Services = () => {
-  return <Box>
-    <h2>{services.title}</h2>
+  return <Box className="services">
+    <h2 className='heading'>{services.title}</h2>
 
     <section>
       <Carousel
@@ -104,12 +104,12 @@ const Services = () => {
 
 const Testimonials = () => {
   return <Box className="testimonials">
-    <h2>{testimonials.title}</h2>
+    <h2 className='heading'>{testimonials.title}</h2>
 
     <section>
       <Carousel
         responsive={responsive}
-        ssr={true} 
+        ssr={true}
         infinite
         autoPlay
         autoPlaySpeed={2000}
@@ -118,7 +118,12 @@ const Testimonials = () => {
       >
         {testimonials.data.map(val => {
           return <div className='innerSection' key={val.name}>
-            <Image width={190} height={270} alt={val.name} src={val.image} />
+            {val?.link ?
+              <a target='_blank' href={val?.link}>
+                <Image width={190} height={270} alt={val.name} src={val.image} />
+              </a>
+              : <Image width={190} height={270} alt={val.name} src={val.image} />}
+            {/* add youtube icon if link present - low priority */}
             <Box>
               <Typography component="h2">{val.name}</Typography>
               <Typography component="p">{val.description}</Typography>
