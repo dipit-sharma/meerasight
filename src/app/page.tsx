@@ -103,13 +103,13 @@ const Services = () => {
 }
 
 const Testimonials = () => {
-  return <Box>
+  return <Box className="testimonials">
     <h2>{testimonials.title}</h2>
 
     <section>
       <Carousel
         responsive={responsive}
-        ssr={true} // means to render carousel on server-side.
+        ssr={true} 
         infinite
         autoPlay
         autoPlaySpeed={2000}
@@ -117,11 +117,11 @@ const Testimonials = () => {
         showDots
       >
         {testimonials.data.map(val => {
-          return <div key={val.name}>
-            <Image width={150} height={150} alt={val.name} src={val.image} />
+          return <div className='innerSection' key={val.name}>
+            <Image width={190} height={270} alt={val.name} src={val.image} />
             <Box>
-              <Typography>{val.name}</Typography>
-              <Typography>{val.description}</Typography>
+              <Typography component="h2">{val.name}</Typography>
+              <Typography component="p">{val.description}</Typography>
             </Box>
           </div>
         })}

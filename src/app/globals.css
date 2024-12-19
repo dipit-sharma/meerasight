@@ -9,6 +9,8 @@
   --theme-text-color-light: #6C2368;
   --theme-bg-color: rgb(137, 75, 134);
   --theme-bg-color-light: #D274CD;
+
+  --text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +27,7 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: auto;
+  font-family: futura-lt-w01-book, sans-serif;
 }
 
 /* footer css */
@@ -98,7 +101,7 @@ body {
   font-size: 1.25rem;
   font-family: futura-lt-w01-book, sans-serif;
   line-height: 1.67em;
-  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+  text-shadow: var(--text-shadow);
   color: var(--theme-text-color);
 }
 
@@ -107,5 +110,37 @@ body {
   color: var(--theme-text-color);
   line-height: normal;
   font-style: normal;
-  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+  text-shadow: var(--text-shadow);
+}
+
+.home .testimonials .innerSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  gap: 5rem;
+  padding: 2rem 8rem;
+}
+
+.home .testimonials .innerSection img {
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.home .testimonials .innerSection h2 {
+  font-size: 30px;
+  text-decoration: underline;
+  color: var(--theme-text-color);
+  text-shadow: var(--text-shadow);
+  text-align: center;
+  line-height: normal;
+  margin-bottom: 2rem;
+}
+
+.home .testimonials .innerSection p {
+  font-size: 20px;
+  color: var(--theme-text-color-light);
+  text-shadow: var(--text-shadow);
+  text-align: center;
+  line-height: 28px;
 }
