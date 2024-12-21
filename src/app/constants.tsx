@@ -53,43 +53,43 @@ const services = {
     images: [
         {
             image: retina_services,
-            link: "/retina_services"
+            link: "/services/retina_services"
         },
         {
             image: refractive_services,
-            link: "/refractive_services"
+            link: "/services/refractive_services"
         },
         {
             image: pediatric_eye_diseases,
-            link: "/pediatric_eye_diseases"
+            link: "/services/pediatric_eye_diseases"
         },
         {
             image: ocular_surface_diseases_management,
-            link: "/ocular_surface_diseases_management"
+            link: "/services/ocular_surface_diseases_management"
         },
         {
             image: keratoconous,
-            link: "/keratoconous"
+            link: "/services/keratoconous"
         },
         {
             image: glaucoma_services,
-            link: "/glaucoma_services"
+            link: "/services/glaucoma_services"
         },
         {
             image: cornea_services,
-            link: "/cornea_services"
+            link: "/services/cornea_services"
         },
         {
             image: contact_lens_clinic,
-            link: "/contact_lens_clinic"
+            link: "/services/contact_lens_clinic"
         },
         {
             image: comprehensive_eye_examination,
-            link: "/comprehensive_eye_examination"
+            link: "/services/comprehensive_eye_examination"
         },
         {
             image: cataract,
-            link: "/cataract"
+            link: "/services/cataract"
         },
     ],
     visits: {
