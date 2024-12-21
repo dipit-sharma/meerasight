@@ -92,7 +92,7 @@ const Services = () => {
     <Box className="services">
       <h2 className="heading">{services.title}</h2>
 
-      <section>
+      <section className="carousel">
         <Carousel responsive={responsive}>
           {services.images.map((val, index) => (
             <Link key={index} href={val.link}>
@@ -102,13 +102,13 @@ const Services = () => {
         </Carousel>
       </section>
 
-      <section>
-        <p>{services.visits.title}</p>
-        <p>{services.visits.subtitle}</p>
+      <section className="contentBox">
+        <p className="headingText title">{services.visits.title}</p>
+        <p className="headingText subtitle">{services.visits.subtitle}</p>
 
         {services.visits.time.map((val) => (
-          <div key={val.day}>
-            <p>{val.day}:</p>
+          <div className="schedule" key={val.day}>
+            <p style={{textAlign: "right"}}>{val.day}:&nbsp;</p>
             <ul>
               {val.slots.map((s) => (
                 <li key={s}>{s}</li>

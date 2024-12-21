@@ -40,6 +40,7 @@ body {
   max-width: 1000px;
   margin: auto;
   font-family: futura-lt-w01-book, sans-serif;
+  letter-spacing: normal;
 }
 
 /* footer css */
@@ -76,17 +77,22 @@ body {
 
 /* HOME */
 
+.home .services,
+.home .testimonials,
+.home .location,
+.home .welcome {
+  margin: 2rem 0rem;
+}
+
 .home .location {
   height: 400px;
   width: 100%;
-  margin: 5rem 0rem;
 }
 
 .home .welcome {
   display: flex;
   gap: 2rem;
   width: 100%;
-  margin: 2rem 0rem;
 }
 
 .home .welcome section {
@@ -170,4 +176,34 @@ body {
   text-shadow: var(--text-shadow);
   text-align: center;
   line-height: 28px;
+}
+
+.home .services section ul {
+  align-items: center;
+  gap: 1rem;
+}
+
+.home .services .contentBox {
+  color: rgb(108, 35, 104);
+}
+
+.home .services .carousel {
+  margin: 1rem 0rem;
+}
+
+.home .services .contentBox .headingText {
+  text-shadow: var(--text-shadow);
+  text-align: center;
+  line-height: 31px;
+  color: var(--theme-text-color-light);
+}
+
+.home .services .contentBox .title {
+  font-size: 22px;
+}
+
+.home .services .schedule {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 15px;
 }
