@@ -25,6 +25,14 @@ import ocular_surface_diseases_management from "./ocular_surface_diseases_manage
 import pediatric_eye_diseases from "./pediatric_eye_diseases.avif";
 import refractive_services from "./refractive_services.avif";
 import retina_services from "./retina_services.avif";
+import event1 from "./event1.avif";
+import event2 from "./event2.avif";
+import event3 from "./event3.avif";
+import event4 from "./event4.avif";
+import event5 from "./event5.avif";
+import event6 from "./event6.avif";
+import event7 from "./event7.avif";
+import event8 from "./event8.avif";
 
 export {
   retina_services,
@@ -54,4 +62,12 @@ export {
   welcome6,
   welcome7,
   meeralogo,
+  event1,
+  event2,
+  event3,
+  event4,
+  event5,
+  event6,
+  event7,
+  event8,
 };
