@@ -9,6 +9,7 @@
   --theme-text-color-light: #6C2368;
   --theme-bg-color: rgb(137, 75, 134);
   --theme-bg-color-light: #D274CD;
+  --theme-bg-color-light-accent-2: rgba(185, 127, 182, 0.555);
 
   --text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
 }
@@ -33,8 +34,22 @@
   font-size: 20px;
 }
 
+.para-heading{
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
 .p{
   font-size: 16px;
+}
+
+.btn-contained {
+  background-color: var(--theme-bg-color-light);
+  margin: 1rem 0rem;
+}
+
+.btn-contained:hover {
+  background-color: var(--theme-bg-color);
 }
 
 body {
@@ -45,6 +60,7 @@ body {
   margin: auto;
   font-family: futura-lt-w01-book, sans-serif;
   letter-spacing: normal;
+  color: var(--theme-text-color)
 }
 
 /* footer css */
