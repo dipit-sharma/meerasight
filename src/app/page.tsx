@@ -1,101 +1,189 @@
+"use client";
+
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
+import React from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { services, testimonials, welcomeSection } from "./constants";
+import Link from "next/link";
 
-export default function Home() {
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 1,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+
+const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="home">
+      <Welcome />
+      <Services />
+      <Testimonials />
+      <Location />
     </div>
   );
-}
+};
+
+const Welcome = () => {
+  return (
+    <Box className="welcome">
+      <section>
+        <Carousel
+          centerMode={false}
+          responsive={responsive}
+          ssr={true} // means to render carousel on server-side.
+          infinite
+          autoPlay
+          autoPlaySpeed={2000}
+          transitionDuration={500}
+          removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+          slidesToSlide={1}
+        >
+          {welcomeSection.images.map((val, index) => (
+            <div className="carouselImageBox" key={index}>
+              <Image layout="fill" alt="welcome carousel image" src={val} />
+            </div>
+          ))}
+        </Carousel>
+      </section>
+
+      <section className="content">
+        <h1>{welcomeSection.title}</h1>
+        <h4>{welcomeSection.subtitle}</h4>
+      </section>
+    </Box>
+  );
+};
+
+const Services = () => {
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 4,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+  return (
+    <Box className="services">
+      <h2 className="heading">{services.title}</h2>
+
+      <section className="carousel">
+        <Carousel responsive={responsive}>
+          {services.images.map((val, index) => (
+            <Link key={index} href={val.link}>
+              <Image width={260} height={180} alt={val.link.replace("/", "")} src={val.image} />
+            </Link>
+          ))}
+        </Carousel>
+      </section>
+
+      <section className="contentBox">
+        <p className="headingText title">{services.visits.title}</p>
+        <p className="headingText subtitle">{services.visits.subtitle}</p>
+
+        {services.visits.time.map((val) => (
+          <div className="schedule" key={val.day}>
+            <p style={{textAlign: "right"}}>{val.day}:&nbsp;</p>
+            <ul>
+              {val.slots.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+    </Box>
+  );
+};
+
+const Testimonials = () => {
+  return (
+    <Box className="testimonials">
+      <h2 className="heading">{testimonials.title}</h2>
+
+      <section>
+        <Carousel
+          responsive={responsive}
+          ssr={true}
+          infinite
+          autoPlay
+          autoPlaySpeed={2000}
+          transitionDuration={500}
+          showDots
+        >
+          {testimonials.data.map((val) => {
+            return (
+              <div className="innerSection" key={val.name}>
+                {val?.link ? (
+                  <a target="_blank" href={val?.link}>
+                    <Image
+                      width={190}
+                      height={270}
+                      alt={val.name}
+                      src={val.image}
+                    />
+                  </a>
+                ) : (
+                  <Image
+                    width={190}
+                    height={270}
+                    alt={val.name}
+                    src={val.image}
+                  />
+                )}
+                {/* add youtube icon if link present - low priority */}
+                <Box>
+                  <Typography component="h2">{val.name}</Typography>
+                  <Typography component="p">{val.description}</Typography>
+                </Box>
+              </div>
+            );
+          })}
+        </Carousel>
+      </section>
+    </Box>
+  );
+};
+
+const Location = () => {
+  return (
+    <div className="location">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.5207755392807!2d77.09466657500766!3d28.614150084916076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04ab79455a29%3A0x33bfb65fb9809a2d!2s14%2C%20Mall%20Rd%2C%20Near%20Cherubs%20Play%20Schoo%2C%20Block%20C5C%2C%20Janakpuri%2C%20Delhi%2C%20110058!5e0!3m2!1sen!2sin!4v1734440118904!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+    </div>
+  );
+};
+
+export default Home;
