@@ -1,5 +1,6 @@
-import Image from "next/image";
-import { dr_anshu } from "../../assets";
+/* eslint-disable @next/next/no-img-element */
+
+import { dr_anshu } from "../../assets/exports";
 
 export default function DrAnshuan() {
   const imageWidth = 180;
@@ -12,7 +13,7 @@ export default function DrAnshuan() {
             <div className="sub-heading">MBBS, MS (OPHTHALMOLOGY), FVRS</div>
           </div>
           <div>
-            <Image src={dr_anshu} alt="dr_sonia" width={imageWidth} />
+            <img src={dr_anshu} alt="dr_sonia" width={imageWidth} />
           </div>
         </div>
       </div>

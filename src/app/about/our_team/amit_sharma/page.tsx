@@ -1,5 +1,6 @@
-import Image from "next/image";
-import { dr_anshu } from "../../../../../assets";
+/* eslint-disable @next/next/no-img-element */
+
+import { dr_anshu } from "../../../../../assets/exports";
 
 export default function AmitSharma() {
   const imageWidth = 180;
@@ -16,7 +17,7 @@ export default function AmitSharma() {
             </div>
           </div>
           <div>
-            <Image src={dr_anshu} alt="dr_sonia" width={imageWidth} />
+            <img src={dr_anshu} alt="dr_sonia" width={imageWidth} />
           </div>
         </div>
       </div>

@@ -1,11 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import { Box, Typography } from "@mui/material";
-import "./styles.css";
-import { events } from "./constants";
-import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { events } from "./constants";
+import "./styles.css";
 
 interface CardType {
-  image: StaticImageData;
+  image: string;
   title: string;
   date: string;
   text: string[];
@@ -38,7 +38,7 @@ export default function About() {
 function Card({ data }: { data: CardType }) {
   return (
     <Box className="card">
-      <Image width={358} height={260} alt={data.title} src={data.image} />
+      <img width={358} height={260} alt={data.title} src={data.image} />
       <section className="contentBox">
         <Typography className="date text-justify" component="span">
           {data.date}

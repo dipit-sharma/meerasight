@@ -33,6 +33,9 @@ const event5 = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.fir
 const event6 = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fevent6.avif?alt=media&token=c43d1bbf-bd84-411a-aba5-2a890ad68b55`;
 const event7 = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fevent6.avif?alt=media&token=c43d1bbf-bd84-411a-aba5-2a890ad68b55`;
 const event8 = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fevent8.avif?alt=media&token=e46fced1-8da4-4a97-9f61-95bb6cf08b47`;
+const facade = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Ffacade.avif?alt=media&token=e10a4d80-0af5-4445-8b87-76263c429f10`;
+const dr_sonia = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fdr_sonia.avif?alt=media&token=44c4bc7a-bcfd-46b5-84cf-4b367d6f03a1`;
+const dr_anshu = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fanshu.avif?alt=media&token=5f897f1f-d471-4888-a06f-d8f3059bb357`;
 
 export {
   retina_services,
@@ -70,4 +73,7 @@ export {
   event6,
   event7,
   event8,
+  facade,
+  dr_anshu,
+  dr_sonia
 };

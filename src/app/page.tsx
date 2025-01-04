@@ -1,12 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
-import React from "react";
+import Link from "next/link";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { services, testimonials, welcomeSection } from "./constants";
-import Link from "next/link";
 
 const responsive = {
   superLargeDesktop: {
@@ -55,7 +54,7 @@ const Welcome = () => {
         >
           {welcomeSection.images.map((val, index) => (
             <div className="carouselImageBox" key={index}>
-              <Image layout="fill" alt="welcome carousel image" src={val} />
+              <img alt="welcome carousel image" src={val} />
             </div>
           ))}
         </Carousel>
@@ -96,7 +95,7 @@ const Services = () => {
         <Carousel responsive={responsive}>
           {services.images.map((val, index) => (
             <Link key={index} href={val.link}>
-              <Image width={260} height={180} alt={val.link.replace("/", "")} src={val.image} />
+              <img width={260} height={180} alt={val.link.replace("/", "")} src={val.image} />
             </Link>
           ))}
         </Carousel>
@@ -141,7 +140,7 @@ const Testimonials = () => {
               <div className="innerSection" key={val.name}>
                 {val?.link ? (
                   <a target="_blank" href={val?.link}>
-                    <Image
+                    <img
                       width={190}
                       height={270}
                       alt={val.name}
@@ -149,7 +148,7 @@ const Testimonials = () => {
                     />
                   </a>
                 ) : (
-                  <Image
+                  <img
                     width={190}
                     height={270}
                     alt={val.name}
