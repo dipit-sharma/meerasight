@@ -13,7 +13,7 @@ export default function OurTeam() {
         <div className="center">
           <div className="flex text-center gap-4">
             {team_members.map((item, idx) => (
-              <div className="w-full">
+              <div key={idx} className="w-full">
                 <div key="link" className="our-team-card p-8 h-full mb-4">
                   <div className="text-2xl">{item.label}</div>
                   <div>{item.desig}</div>

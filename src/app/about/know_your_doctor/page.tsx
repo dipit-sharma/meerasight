@@ -1,10 +1,7 @@
-import Image from "next/image";
-import { dr_anshu, dr_sonia } from "../../../../assets";
-import DrSoniaSharma from "@/components/DrSoniaSharma";
 import DrAnshuman from "@/components/DrAnshuman";
+import DrSoniaSharma from "@/components/DrSoniaSharma";
 
 export default function KnowDoctor() {
-  const imageWidth = 180;
   return (
     <div>
       <DrSoniaSharma />

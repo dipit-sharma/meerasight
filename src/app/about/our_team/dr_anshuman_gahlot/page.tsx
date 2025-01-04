@@ -1,5 +1,5 @@
 import DrAnshuman from "@/components/DrAnshuman";
 
-export default function(){
+export default function DrAnshumanPage() {
     return <DrAnshuman />
 }

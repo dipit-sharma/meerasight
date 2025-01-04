@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { dr_anshu, dr_sonia } from "../../assets";
+import { dr_sonia } from "../../assets";
 
 export default function DrSoniaSharma() {
     const imageWidth = 180

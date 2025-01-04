@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { dr_anshu } from "../../assets";
 
-export default function () {
+export default function DrAnshuan() {
   const imageWidth = 180;
   return (
     <div>
