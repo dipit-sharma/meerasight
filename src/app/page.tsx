@@ -108,7 +108,7 @@ const Services = () => {
 
         {services.visits.time.map((val) => (
           <div className="schedule" key={val.day}>
-            <p style={{textAlign: "right"}}>{val.day}:&nbsp;</p>
+            <p style={{ textAlign: "right" }}>{val.day}:&nbsp;</p>
             <ul>
               {val.slots.map((s) => (
                 <li key={s}>{s}</li>
