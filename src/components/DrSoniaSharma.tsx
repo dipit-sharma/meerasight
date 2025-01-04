@@ -1,5 +1,6 @@
-import Image from "next/image";
-import { dr_sonia } from "../../assets";
+/* eslint-disable @next/next/no-img-element */
+
+import { dr_sonia } from "../../assets/exports"
 
 export default function DrSoniaSharma() {
     const imageWidth = 180
@@ -22,7 +23,7 @@ export default function DrSoniaSharma() {
                     </div>
                 </div>
                 <div>
-                    <Image src={dr_sonia} alt="dr_sonia" width={imageWidth} />
+                    <img src={dr_sonia} alt="dr_sonia" width={imageWidth} />
                 </div>
             </div>
         </div>

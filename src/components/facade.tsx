@@ -1,10 +1,12 @@
-import Image from "next/image";
-import { facade } from "../../assets";
+/* eslint-disable @next/next/no-img-element */
+
+import { facade } from "../../assets/exports";
+
 
 export const Facade = () => {
   return (
     <div className="center">
-      <Image height={500} src={facade} alt="facade" />
+      <img height={500} src={facade} alt="facade" />
     </div>
   );
 };

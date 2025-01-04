@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import { Box, Button, Typography } from "@mui/material";
-import "./styles.css";
-import { services } from "./constants";
-import Image from "next/image";
 import Link from "next/link";
+import { services } from "./constants";
+import "./styles.css";
 
 export default function About() {
   return (
@@ -13,7 +13,7 @@ export default function About() {
         <ul>
           {services.map((val, index) => <li key={index}>
             <Link href={val.link}>
-              <Image width={316} height={214} alt={val.link.replace("/", "")} src={val.image} />
+              <img width={316} height={214} alt={val.link.replace("/", "")} src={val.image} />
               <Button className="serviceCTA" variant="contained">Book Service</Button>
             </Link>
           </li>)}
