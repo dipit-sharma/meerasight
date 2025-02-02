@@ -1,13 +1,28 @@
-.title{
-    font-size: 28px;
+.title {
+  font-size: 28px;
+  width: 100%;
 }
 
-.blog-card{
-    color: rgba(0, 0, 0, 0.629);
-    display: flex;
-    gap: 32;
+.blog-card {
+  color: rgba(0, 0, 0, 0.629);
+  display: flex;
+  gap: 32;
+  margin-bottom: 24px;
+  width: 100%;
 }
 
-.parent{
-    padding-top: 28px;
+.parent {
+  padding-top: 28px;
+}
+
+.img-cnt {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
+.content {
+  width: 100%;
 }

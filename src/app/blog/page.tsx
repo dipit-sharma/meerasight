@@ -7,8 +7,8 @@ export default function Blogs() {
             {
                 blogs.map(item => (
                     <div key={item.image} className="blog-card">
-                        <div className="img-cnt">
-                            <img width={800} src={item.image} alt="blog" />
+                        <div className="img-cnt" style={{ backgroundImage: `url(${item.image})` }}>
+
                         </div>
                         <div className="content">
                             <div className="title">{item.title}</div>
