@@ -15,7 +15,7 @@ export default function About() {
           {footerBtns.map((item, idx) => (
             <div key={idx}>
               <Link href={`about/${createHref(item)}`}>
-                <Button variant="contained">{item}</Button>
+                <Button className="serviceCTA" variant="contained">{item}</Button>
               </Link>
             </div>
           ))}

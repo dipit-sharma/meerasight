@@ -1,0 +1,13 @@
+.title{
+    font-size: 28px;
+}
+
+.blog-card{
+    color: rgba(0, 0, 0, 0.629);
+    display: flex;
+    gap: 32;
+}
+
+.parent{
+    padding-top: 28px;
+}

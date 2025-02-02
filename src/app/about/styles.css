@@ -1,7 +1,16 @@
-.footerBtns{
-    display: flex;
-    gap: 20px;
+.footerBtns {
+  display: flex;
+  gap: 20px;
 }
-.our-team-card{
-    background-color: var(--theme-bg-color-light-accent-2);
+.our-team-card {
+  background-color: var(--theme-bg-color-light-accent-2);
+}
+
+.ourServices .serviceCTA {
+  background-color: var(--theme-bg-color-light);
+  margin: 1rem 0rem;
+}
+
+.ourServices .serviceCTA:hover {
+  background-color: var(--theme-bg-color);
 }

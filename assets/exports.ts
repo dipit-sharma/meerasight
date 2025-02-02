@@ -36,6 +36,7 @@ const event8 = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.fir
 const facade = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Ffacade.avif?alt=media&token=e10a4d80-0af5-4445-8b87-76263c429f10`;
 const dr_sonia = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fdr_sonia.avif?alt=media&token=44c4bc7a-bcfd-46b5-84cf-4b367d6f03a1`;
 const dr_anshu = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fanshu.avif?alt=media&token=5f897f1f-d471-4888-a06f-d8f3059bb357`;
+const blog1 = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fblog1.webp?alt=media&token=1b008e0d-ba89-44e6-92e9-c9800902996d`;
 
 export {
   retina_services,
@@ -75,5 +76,6 @@ export {
   event8,
   facade,
   dr_anshu,
-  dr_sonia
+  dr_sonia,
+  blog1
 };

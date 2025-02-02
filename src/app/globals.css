@@ -6,9 +6,9 @@
   --background: #ffffff;
   --foreground: #171717;
   --theme-text-color: rgb(108, 35, 104);
-  --theme-text-color-light: #6C2368;
+  --theme-text-color-light: #6c2368;
   --theme-bg-color: rgb(137, 75, 134);
-  --theme-bg-color-light: #D274CD;
+  --theme-bg-color-light: #d274cd;
   --theme-bg-color-light-accent-2: rgba(185, 127, 182, 0.555);
 
   --text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
@@ -30,16 +30,16 @@
   font-size: 32px;
 }
 
-.sub-heading{
+.sub-heading {
   font-size: 20px;
 }
 
-.para-heading{
+.para-heading {
   font-size: 24px;
   margin-bottom: 12px;
 }
 
-.p{
+.p {
   font-size: 16px;
 }
 
@@ -60,7 +60,7 @@ body {
   margin: auto;
   font-family: futura-lt-w01-book, sans-serif;
   letter-spacing: normal;
-  color: var(--theme-text-color)
+  color: var(--theme-text-color);
 }
 
 /* footer css */
@@ -89,6 +89,9 @@ body {
   background-color: var(--theme-text-color);
   display: grid;
   place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer .icon {
@@ -171,7 +174,9 @@ body {
 
 .home .testimonials .innerSection img {
   border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   max-width: unset;
 }
 
