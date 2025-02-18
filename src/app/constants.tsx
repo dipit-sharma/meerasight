@@ -44,7 +44,7 @@ const welcomeSection = {
         welcome4,
         welcome5,
         welcome6,
-        welcome7
+        welcome7,
     ],
 };
 
@@ -53,43 +53,43 @@ const services = {
     images: [
         {
             image: retina_services,
-            link: "/services/retina_services"
+            link: "/services/retina_services",
         },
         {
             image: refractive_services,
-            link: "/services/refractive_services"
+            link: "/services/refractive_services",
         },
         {
             image: pediatric_eye_diseases,
-            link: "/services/pediatric_eye_diseases"
+            link: "/services/pediatric_eye_diseases",
         },
         {
             image: ocular_surface_diseases_management,
-            link: "/services/ocular_surface_diseases_management"
+            link: "/services/ocular_surface_diseases_management",
         },
         {
             image: keratoconous,
-            link: "/services/keratoconous"
+            link: "/services/keratoconous",
         },
         {
             image: glaucoma_services,
-            link: "/services/glaucoma_services"
+            link: "/services/glaucoma_services",
         },
         {
             image: cornea_services,
-            link: "/services/cornea_services"
+            link: "/services/cornea_services",
         },
         {
             image: contact_lens_clinic,
-            link: "/services/contact_lens_clinic"
+            link: "/services/contact_lens_clinic",
         },
         {
             image: comprehensive_eye_examination,
-            link: "/services/comprehensive_eye_examination"
+            link: "/services/comprehensive_eye_examination",
         },
         {
             image: cataract,
-            link: "/services/cataract"
+            link: "/services/cataract",
         },
     ],
     visits: {
@@ -183,27 +183,57 @@ const testimonials = {
 const footer = {
     links: [
         {
-            icon: <WhatsAppIcon className="icon" />,
+            icon: (
+                <img
+                    alt="twitter"
+                    src="https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fwhatsapp.png?alt=media&token=db9e624c-2dc1-424b-8c67-def8db5952b9"
+                />
+            ),
             link: "https://api.whatsapp.com/send/?phone=917428728458&text&type=phone_number&app_absent=0", // whatsapp
         },
         {
-            icon: <FacebookIcon className="icon" />,
+            icon: (
+                <img
+                    alt="fb"
+                    src="https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Ffacebook.png?alt=media&token=58e269fb-ee74-4713-b0f4-80bca71bc629"
+                />
+            ),
             link: "https://www.facebook.com/MeeraSighteyeclinic/", //fb
         },
         {
-            icon: <InstagramIcon className="icon" />,
+            icon: (
+                <img
+                    src="https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Finstagram.png?alt=media&token=24e6d584-b93a-45e0-91d3-6d286c923a41"
+                    alt="instagram"
+                />
+            ),
             link: "https://www.instagram.com/meera_sight/", // insta
         },
         {
-            icon: <XIcon className="icon" />,
+            icon: (
+                <img
+                    alt="twitter"
+                    src="https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fsocial-media.png?alt=media&token=aa880916-4a65-4c16-9277-bf6d615a702c"
+                />
+            ),
             link: "https://twitter.com/MeeraSight", // twitter
         },
         {
-            icon: <LinkedInIcon className="icon" />,
+            icon: (
+                <img
+                    src="https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Flinkedin.png?alt=media&token=236103b8-6c59-4b99-b542-9155ca207cc1"
+                    alt="linkedin"
+                />
+            ),
             link: "https://www.linkedin.com/in/meerasight/", // linkedin
         },
         {
-            icon: <YouTubeIcon className="icon" />,
+            icon: (
+                <img
+                    src="https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fyoutube.png?alt=media&token=43af0628-2744-4b6f-96a5-4f7883b574e2"
+                    alt="youtube"
+                />
+            ),
             link: "https://www.youtube.com/channel/UCoEM8sMaNUdwedYXpOQDY_A", // youtube
         },
     ],

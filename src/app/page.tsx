@@ -6,6 +6,7 @@ import Link from "next/link";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { services, testimonials, welcomeSection } from "./constants";
+import "./globals.css";
 
 const responsive = {
   superLargeDesktop: {
@@ -95,7 +96,12 @@ const Services = () => {
         <Carousel responsive={responsive}>
           {services.images.map((val, index) => (
             <Link key={index} href={val.link}>
-              <img width={260} height={180} alt={val.link.replace("/", "")} src={val.image} />
+              <img
+                width={260}
+                height={180}
+                alt={val.link.replace("/", "")}
+                src={val.image}
+              />
             </Link>
           ))}
         </Carousel>
@@ -138,6 +144,15 @@ const Testimonials = () => {
           {testimonials.data.map((val) => {
             return (
               <div className="innerSection" key={val.name}>
+                <div className="carousel-icon">
+                  <a target="_blank" href={val?.link}>
+                    <img
+                      width={50}
+                      src="https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fyoutube.png?alt=media&token=43af0628-2744-4b6f-96a5-4f7883b574e2"
+                      alt="youtube"
+                    />
+                  </a>
+                </div>
                 {val?.link ? (
                   <a target="_blank" href={val?.link}>
                     <img

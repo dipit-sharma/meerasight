@@ -96,7 +96,7 @@ export default function Contact() {
                                 </label>
                                 <textarea
                                     id="message"
-                                    rows="5"
+                                    rows={5}
                                     className={'textarea'}
                                 ></textarea>
                             </div>
