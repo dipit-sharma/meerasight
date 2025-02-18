@@ -22,10 +22,11 @@ export const MenuBar = () => {
                     <IconButton
                         size="large"
                         edge="start"
-                        color="rgb(108, 35, 104)"
+                        //color="rgb(108, 35, 104)"
                         aria-label="menu"
                         sx={{ mr: 2 }}
                         onClick={() => setOpen(true)}
+                        style={{ color: "rgb(108, 35, 104)" }}
                     >
                         <MenuIcon />
                     </IconButton>

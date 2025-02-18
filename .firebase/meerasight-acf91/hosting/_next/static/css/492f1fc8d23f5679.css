@@ -1,0 +1,1 @@
+.footerBtns{display:flex;gap:20px}.our-team-card{background-color:var(--theme-bg-color-light-accent-2)}.serviceCTA{background-color:var(--theme-bg-color-light);margin:1rem 0;border-radius:4px;color:#fff;padding:5px 15px}.serviceCTA:hover{background-color:var(--theme-bg-color)}@media screen and (max-width:1000px){.footerBtns{flex-direction:column}}
