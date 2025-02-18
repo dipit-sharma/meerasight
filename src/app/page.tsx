@@ -22,7 +22,7 @@ const responsive = {
     items: 1,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 600, min: 0 },
     items: 1,
   },
 };
@@ -95,7 +95,7 @@ const Services = () => {
       <section className="carousel">
         <Carousel responsive={responsive}>
           {services.images.map((val, index) => (
-            <Link key={index} href={val.link}>
+            <Link className="services-carousel" key={index} href={val.link}>
               <img
                 width={260}
                 height={180}
@@ -136,7 +136,7 @@ const Testimonials = () => {
           responsive={responsive}
           ssr={true}
           infinite
-          autoPlay
+          //autoPlay
           autoPlaySpeed={2000}
           transitionDuration={500}
           showDots

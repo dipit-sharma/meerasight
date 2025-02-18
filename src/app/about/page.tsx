@@ -1,9 +1,8 @@
-import { Button } from "@mui/material";
+import { Facade } from "@/components/facade";
 import Link from "next/link";
 import { createHref } from "../utils";
 import { footerBtns } from "./constants";
 import "./styles.css";
-import { Facade } from "@/components/facade";
 
 export default function About() {
   return (
@@ -15,7 +14,7 @@ export default function About() {
           {footerBtns.map((item, idx) => (
             <div key={idx}>
               <Link href={`about/${createHref(item)}`}>
-                <Button className="serviceCTA" variant="contained">{item}</Button>
+                <button className="serviceCTA">{item}</button>
               </Link>
             </div>
           ))}

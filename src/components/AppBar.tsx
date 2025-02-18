@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-const list = [
+export const list = [
   {
     id: "/",
     value: "Home",

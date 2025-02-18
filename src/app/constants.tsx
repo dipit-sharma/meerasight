@@ -1,30 +1,24 @@
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import XIcon from "@mui/icons-material/X";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 
 import {
-    vaibhavi,
+    cataract,
+    comprehensive_eye_examination,
+    contact_lens_clinic,
+    cornea_services,
+    glaucoma_services,
+    jitendra,
+    keratoconous,
+    nirmal,
+    ocular_surface_diseases_management,
+    pediatric_eye_diseases,
+    pradeep2,
     rajkumar,
     rajkumarsharma,
-    sunil,
-    pradeep2,
-    trinabh,
-    nirmal,
-    jitendra,
-    vanshika,
-    retina_services,
     refractive_services,
-    pediatric_eye_diseases,
-    ocular_surface_diseases_management,
-    keratoconous,
-    glaucoma_services,
-    cornea_services,
-    contact_lens_clinic,
-    comprehensive_eye_examination,
-    cataract,
+    retina_services,
+    sunil,
+    trinabh,
+    vaibhavi,
+    vanshika,
     welcome1,
     welcome2,
     welcome3,
@@ -240,4 +234,5 @@ const footer = {
     text: "©2020 by MeeraSight. All Right Reserved.",
 };
 
-export { welcomeSection, services, testimonials, footer };
+export { footer, services, testimonials, welcomeSection };
+

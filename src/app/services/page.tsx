@@ -10,7 +10,7 @@ export default function About() {
       <Typography component="h2">Our Services</Typography>
 
       <section>
-        <ul>
+        <ul className="servicesList">
           {services.map((val, index) => <li key={index}>
             <Link href={val.link}>
               <img width={316} height={214} alt={val.link.replace("/", "")} src={val.image} />

@@ -1,28 +1,37 @@
 .ourServices h2 {
-    font-size: 50px;
-    text-decoration: underline;
-    color: var(--theme-text-color);
-    text-align: center;
-    margin: 1rem 0rem;
+  font-size: 50px;
+  text-decoration: underline;
+  color: var(--theme-text-color);
+  text-align: center;
+  margin: 1rem 0rem;
 }
 
 .ourServices section ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    row-gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 1rem;
 }
 
 .ourServices section li {
-    text-align: center;
+  text-align: center;
 }
 
 .ourServices .serviceCTA {
-    background-color: var(--theme-bg-color-light);
-    margin: 1rem 0rem;
+  background-color: var(--theme-bg-color-light);
+  margin: 1rem 0rem;
 }
 
 .ourServices .serviceCTA:hover {
-    background-color: var(--theme-bg-color);
+  background-color: var(--theme-bg-color);
+}
+
+@media screen and (max-width: 1000px) {
+  .servicesList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

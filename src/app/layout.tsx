@@ -1,10 +1,11 @@
+import AppBar from "@/components/AppBar";
+import MeeraLogo from "@/components/MeeraLogo";
+import { MenuBar } from "@/components/MenuBar";
+import { Typography } from "@mui/material";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import MeeraLogo from "@/components/MeeraLogo";
-import AppBar from "@/components/AppBar";
-import { Typography } from "@mui/material";
 import { footer } from "./constants";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,21 +33,22 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header>
-          <MeeraLogo />
-          <AppBar />
+          <div className="mobile"><MenuBar /></div>
+          <div className="desktop">
+            <MeeraLogo />
+            <AppBar />
+          </div>
         </header>
         {children}
         <footer className="footer">
           <section className="icons">
-            {footer.links.map((val, index) => <a key={index} href={val.link} target="_blank">
-              <div className="iconBox">
-                {val.icon}
-              </div>
-            </a>)}
+            {footer.links.map((val, index) => (
+              <a key={index} href={val.link} target="_blank">
+                <div className="iconBox">{val.icon}</div>
+              </a>
+            ))}
           </section>
-          <Typography>
-            {footer.text}
-          </Typography>
+          <Typography>{footer.text}</Typography>
         </footer>
       </body>
     </html>

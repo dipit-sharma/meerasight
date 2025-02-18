@@ -26,3 +26,10 @@
 .content {
   width: 100%;
 }
+
+@media screen and (max-width: 1000px) {
+  .blog-card {
+    flex-direction: column;
+    padding: 12px;
+  }
+}

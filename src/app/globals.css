@@ -238,3 +238,47 @@ body {
   top: 80;
   left: 120;
 }
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .home .welcome {
+    flex-direction: column;
+  }
+  .home .welcome .content h1 {
+    font-size: 3.5rem;
+  }
+  .home .testimonials .innerSection {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 10px;
+  }
+  .carousel-icon {
+    width: 20px;
+    position: absolute;
+    top: 40;
+    left: 100;
+  }
+  .services .services-carousel {
+    display: flex;
+    justify-content: center;
+  }
+  .home .services section ul {
+    gap: 0;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .mobile-menu .app-bar {
+    background-color: white;
+  }
+  .mobile-menu .app-bar .tool-bar {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -6,11 +6,20 @@
   background-color: var(--theme-bg-color-light-accent-2);
 }
 
-.ourServices .serviceCTA {
+.serviceCTA {
   background-color: var(--theme-bg-color-light);
   margin: 1rem 0rem;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 15px;
 }
 
-.ourServices .serviceCTA:hover {
+.serviceCTA:hover {
   background-color: var(--theme-bg-color);
+}
+
+@media screen and (max-width: 1000px) {
+  .footerBtns {
+    flex-direction: column;
+  }
 }

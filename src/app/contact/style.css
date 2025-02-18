@@ -91,3 +91,17 @@
   font-size: 16px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1000px) {
+  .flexContainer {
+    flex-direction: column-reverse;
+    margin-top: 100px;
+  }
+  .rightSection {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .leftSection {
+    width: 100%;
+  }
+}
