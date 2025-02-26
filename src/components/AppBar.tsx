@@ -41,7 +41,7 @@ function AppBar() {
   return (
     <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs value={value}>
+        <Tabs indicatorColor="secondary" value={value}>
           {list.map((data) => (
             <Link key={data.id} href={data.id}>
               <Tab label={data.value} />

@@ -37,6 +37,11 @@ const facade = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.fir
 const dr_sonia = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fdr_sonia.avif?alt=media&token=44c4bc7a-bcfd-46b5-84cf-4b367d6f03a1`;
 const dr_anshu = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fanshu.avif?alt=media&token=5f897f1f-d471-4888-a06f-d8f3059bb357`;
 const blog1 = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fblog1.webp?alt=media&token=1b008e0d-ba89-44e6-92e9-c9800902996d`;
+const amit_sharma = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fcap_amit.avif?alt=media&token=3e2a27ee-9cd7-4155-af38-b0f512e4c5da`;
+const meera_sharma = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fmeera_sharma.avif?alt=media&token=a73b2ddf-e9f4-4468-a7c9-8f5d6770bf04`;
+const hc_sharma = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fhc_sharma.avif?alt=media&token=235a439b-653c-4e85-a9b2-021efaeec2ca`;
+const sharda = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fsharda.avif?alt=media&token=d4e25677-693c-4331-b8db-6e62493517d9`;
+const vp = `https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fvp.avif?alt=media&token=b76d6da9-3725-4af1-9c4b-5e970caa93a6`;
 
 export {
   retina_services,
@@ -77,5 +82,10 @@ export {
   facade,
   dr_anshu,
   dr_sonia,
-  blog1
+  blog1,
+  amit_sharma,
+  meera_sharma,
+  hc_sharma,
+  sharda,
+  vp
 };

@@ -1,0 +1,35 @@
+.image-label,
+.small-label {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 12px;
+  line-height: 20px;
+}
+.small-label {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 4px;
+}
+.main {
+  display: flex;
+}
+.two-image-cnt {
+  display: flex;
+  gap: 10;
+}
+
+@media screen and (max-width: 1000px) {
+  .two-image-cnt,
+  .main {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .two-image-cnt {
+    margin-bottom: 12px;
+  }
+  .p {
+    padding: 12px;
+  }
+}
