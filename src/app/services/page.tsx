@@ -11,12 +11,21 @@ export default function About() {
 
       <section>
         <ul className="servicesList">
-          {services.map((val, index) => <li key={index}>
-            <Link href="/contact">
-              <img width={316} height={214} alt={val.link.replace("/", "")} src={val.image} />
-              <Button className="serviceCTA" variant="contained">Book Service</Button>
-            </Link>
-          </li>)}
+          {services.map((val, index) => (
+            <li key={index}>
+              <Link href={"/booking/" + index}>
+                <img
+                  width={316}
+                  height={214}
+                  alt={val.link.replace("/", "")}
+                  src={val.image}
+                />
+                <Button className="serviceCTA" variant="contained">
+                  Book Service
+                </Button>
+              </Link>
+            </li>
+          ))}
         </ul>
       </section>
     </Box>

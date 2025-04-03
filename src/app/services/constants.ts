@@ -15,51 +15,51 @@ export const services = [
   {
     image: retina_services,
     link: "/services/retina_services",
-    content: ""
+    content: "Retina Services"
   },
   {
     image: refractive_services,
     link: "/services/refractive_services",
-    content: ""
+    content: "Refractive Services"
   },
   {
     image: pediatric_eye_diseases,
     link: "/services/pediatric_eye_diseases",
-    content: ""
+    content: "Pediatric Eye Diseases"
   },
   {
     image: ocular_surface_diseases_management,
     link: "/services/ocular_surface_diseases_management",
-    content: ""
+    content: "Ocular Surface Diseases Management"
   },
   {
     image: keratoconous,
     link: "/services/keratoconous",
-    content: ""
+    content: "Keratoconous"
   },
   {
     image: glaucoma_services,
     link: "/services/glaucoma_services",
-    content: ""
+    content: "Glaucoma Services"
   },
   {
     image: cornea_services,
     link: "/services/cornea_services",
-    content: ""
+    content: "Cornea Services"
   },
   {
     image: contact_lens_clinic,
     link: "/services/contact_lens_clinic",
-    content: ""
+    content: "Contact Lens Clinic"
   },
   {
     image: comprehensive_eye_examination,
     link: "/services/comprehensive_eye_examination",
-    content: ""
+    content: "Comprehensive Eye Examination"
   },
   {
     image: cataract,
     link: "/services/cataract",
-    content: ""
+    content: "Cataract"
   },
 ];

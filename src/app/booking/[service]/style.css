@@ -1,0 +1,11 @@
+.booking h2 {
+  font-size: 30px;
+  text-decoration: underline;
+  color: var(--theme-text-color);
+  text-align: center;
+  margin: 1rem 0rem;
+}
+
+.booking_btn {
+  background-color: var(--theme-bg-color-light);
+}
