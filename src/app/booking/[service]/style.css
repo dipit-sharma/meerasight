@@ -6,6 +6,6 @@
   margin: 1rem 0rem;
 }
 
-.booking_btn {
+.booking_btn .booking {
   background-color: var(--theme-bg-color-light);
 }
