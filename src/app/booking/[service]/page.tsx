@@ -1,74 +1,77 @@
 "use client";
-import { useState } from "react";
+import { services } from "@/app/services/constants";
 import {
-  TextField,
-  Typography,
   Button,
-  Select,
-  MenuItem,
   FormControl,
   InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+  Typography,
 } from "@mui/material";
+import { DateCalendar, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider, DateCalendar } from "@mui/x-date-pickers";
 import dayjs from "dayjs";
+import { useParams } from "next/navigation";
+import { useState } from "react";
 import { timeSlots } from "./constants";
 import "./style.css";
-import { useRouter } from "next/navigation";
-import { services } from "@/app/services/constants";
 
 export default function Booking() {
-  const router = useRouter();
+  const params = useParams();
+  const { service: service_id } = params ?? {};
+
   const [date, setDate] = useState(dayjs(new Date()));
   const [time, setTime] = useState(timeSlots[0].value);
   const [service, setService] = useState(
-    services[Number(router?.query?.service ?? 0)]?.content
+    services[Number(service_id) ?? 0].content
   );
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState({});
 
-  // const handler = () => {
-  //   try {
-  //     addEvent({
-  //       name: "Patient Name",
-  //       email: "ds.techin@gmail.com",
-  //       date: "2025-03-30T09:00:00-08:00",
-  //       message: "Some message",
-  //       serviceName: "service name",
-  //       endDate: "2025-03-30T10:00:00-08:00",
-  //     })
-  //       .then((res) => {
-  //         console.log(res);
-  //       })
-  //       .catch((e) => {
-  //         console.log(e);
-  //       });
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // };
+  const handler = async () => {
+    if (!validateForm()) {
+      return;
+    }
+
+    const res = await fetch("/api/send-whatsapp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: {
+          date: dayjs(date).format("DD-MM-YYYY"),
+          time: time,
+          service: service,
+          name: name,
+        },
+      }),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      alert("WhatsApp message sent!");
+    } else {
+      alert("Failed to send WhatsApp message.");
+    }
+  };
 
   const validateForm = () => {
-    const errors = {
-      name: "",
-      phone: "",
-      time: "",
-      service: "",
-      date: "",
-    };
+    const errors = {};
     const today = dayjs();
 
     // Name validation (only letters and spaces)
-    if (!name.trim()) {
+    if (!name.trim().length) {
       errors.name = "Name is required";
     } else if (!/^[A-Za-z\s]+$/.test(name)) {
       errors.name = "Name can only contain letters and spaces";
     }
 
     // Phone validation (10 digits only)
-    if (!phone.trim()) {
+    if (!phone.trim().length) {
       errors.phone = "Phone number is required";
     } else if (!/^\d{10}$/.test(phone)) {
       errors.phone = "Phone number must be 10 digits";
@@ -91,26 +94,15 @@ export default function Booking() {
       const selectedDate = dayjs(date);
       if (selectedDate.isBefore(today, "day")) {
         errors.date = "Date must be today or a future date";
-      } else if (selectedDate.day() !== 4) {
-        errors.date = "Appointments are only available on Thursdays";
+      } else if (selectedDate.day() === 4) {
+        errors.date = "Appointments are not available on Thursdays";
       }
     }
 
     setErrors(errors);
-    return Object.keys(errors).length === 0;
-  };
+    console.log(errors);
 
-  const handleSubmit = () => {
-    if (validateForm()) {
-      console.log("Form submitted", {
-        name,
-        email,
-        phone,
-        time,
-        service,
-        date,
-      });
-    }
+    return Object.keys(errors).length === 0;
   };
 
   return (
@@ -223,7 +215,7 @@ export default function Booking() {
           <div className="booking" style={{ width: "100%", marginTop: 24 }}>
             <Button
               className="booking_btn"
-              onClick={handleSubmit}
+              onClick={handler}
               fullWidth
               variant="contained"
               style={{ backgroundColor: "#d274cd" }}
