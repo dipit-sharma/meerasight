@@ -3,7 +3,7 @@ import DrSoniaSharma from "@/components/DrSoniaSharma";
 
 export default function KnowDoctor() {
   return (
-    <div>
+    <div style={{ padding: "10px" }}>
       <DrSoniaSharma />
 
       <div className="center">

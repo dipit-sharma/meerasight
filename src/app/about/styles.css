@@ -18,8 +18,16 @@
   background-color: var(--theme-bg-color);
 }
 
+.cnt {
+  display: flex;
+}
+
 @media screen and (max-width: 1000px) {
   .footerBtns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cnt {
     flex-direction: column;
   }
 }

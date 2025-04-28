@@ -273,6 +273,7 @@ body {
   }
   .mobile {
     display: block;
+    margin-bottom: 100px;
   }
   .mobile-menu .app-bar {
     background-color: white;

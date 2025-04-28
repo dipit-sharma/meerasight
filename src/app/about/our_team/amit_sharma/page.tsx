@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { dr_anshu } from "../../../../../assets/exports";
+import { amit_sharma, dr_anshu } from "../../../../../assets/exports";
 
 export default function AmitSharma() {
   const imageWidth = 180;
   return (
-    <div>
+    <div style={{ padding: "10px" }}>
       <div className="center">
         <div className="flex justify-between w-[1000px]">
           <div>
@@ -17,7 +17,12 @@ export default function AmitSharma() {
             </div>
           </div>
           <div>
-            <img src={dr_anshu} alt="dr_sonia" width={imageWidth} />
+            <img
+              style={{ border: "solid 2px rgb(137, 75, 134)" }}
+              src={amit_sharma}
+              alt="capt_amit"
+              width={imageWidth}
+            />
           </div>
         </div>
       </div>

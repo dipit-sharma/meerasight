@@ -5,7 +5,7 @@ import { dr_anshu } from "../../assets/exports";
 export default function DrAnshuan() {
   const imageWidth = 180;
   return (
-    <div>
+    <div style={{ padding: "10px" }}>
       <div className="center">
         <div className="flex justify-between w-[1000px]">
           <div>
@@ -13,7 +13,12 @@ export default function DrAnshuan() {
             <div className="sub-heading">MBBS, MS (OPHTHALMOLOGY), FVRS</div>
           </div>
           <div>
-            <img src={dr_anshu} alt="dr_sonia" width={imageWidth} />
+            <img
+              style={{ border: "solid 2px rgb(137, 75, 134)" }}
+              src={dr_anshu}
+              alt="dr_sonia"
+              width={imageWidth}
+            />
           </div>
         </div>
       </div>

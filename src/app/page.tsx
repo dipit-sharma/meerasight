@@ -95,7 +95,11 @@ const Services = () => {
       <section className="carousel">
         <Carousel responsive={responsive}>
           {services.images.map((val, index) => (
-            <Link className="services-carousel" key={index} href={val.link}>
+            <Link
+              className="services-carousel"
+              key={index}
+              href={`/booking/${index}`}
+            >
               <img
                 width={260}
                 height={180}
@@ -145,13 +149,15 @@ const Testimonials = () => {
             return (
               <div className="innerSection" key={val.name}>
                 <div className="carousel-icon">
-                  <a target="_blank" href={val?.link}>
-                    <img
-                      width={50}
-                      src="https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fyoutube.png?alt=media&token=43af0628-2744-4b6f-96a5-4f7883b574e2"
-                      alt="youtube"
-                    />
-                  </a>
+                  {val?.link && (
+                    <a target="_blank" href={val?.link}>
+                      <img
+                        width={50}
+                        src="https://firebasestorage.googleapis.com/v0/b/meerasight-acf91.firebasestorage.app/o/images%2Fyoutube.png?alt=media&token=43af0628-2744-4b6f-96a5-4f7883b574e2"
+                        alt="youtube"
+                      />
+                    </a>
+                  )}
                 </div>
                 {val?.link ? (
                   <a target="_blank" href={val?.link}>

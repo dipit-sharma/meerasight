@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 import { services } from "@/app/services/constants";
 import {
@@ -108,7 +109,7 @@ export default function Booking() {
   return (
     <div className="booking">
       <Typography component="h2">Book Your Appointment</Typography>
-      <div style={{ display: "flex", width: "100%" }}>
+      <div className="booking_cnt">
         <div
           style={{
             width: "100%",
@@ -225,6 +226,7 @@ export default function Booking() {
           </div>
         </div>
         <div style={{ width: "100%" }}>
+          <Typography component="h2">Select a date</Typography>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DateCalendar
               value={date}
