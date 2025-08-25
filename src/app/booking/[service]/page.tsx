@@ -43,12 +43,8 @@ export default function Booking() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        message: {
-          date: dayjs(date).format("DD-MM-YYYY"),
-          time: time,
-          service: service,
-          name: name,
-        },
+        to: phone,
+        time: time,
       }),
     });
 

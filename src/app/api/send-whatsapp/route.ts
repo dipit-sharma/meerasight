@@ -1,25 +1,68 @@
-import { NextResponse } from 'next/server';
-import twilio from 'twilio';
+import { NextResponse } from "next/server";
 
-const accountSid = process.env.ACC_SID;
-const authToken = process.env.AUTH_TOKEN;
-const client = twilio(accountSid, authToken);
+const WHATSAPP_API_URL =
+  "https://graph.facebook.com/v22.0/719265351278653/messages";
+const ACCESS_TOKEN =
+  "EAAQKi4POSjEBPfeAV0FCwuB4qf9esgEnxTGlr7RKfCGAVq6ZAllAkUi68OrDp9uvbPTNm8OahRFC11RCMUxGPzYERI9g3aQN0yeZBnBHfmXLvRG8ZB7CsTqKDDe9bfqSsvLC7Szb53nQMTqkTYjPuZAoFg9BRGZCZC0rLEF5FTf3ppAzXSxGXAjuKeiLhJxCNaLJSIkXoiCZC8VjT6Gna909MY7R7ugKB8rCNYxdaVNbgZDZD";
 
 export async function POST(request: Request) {
-    const { message } = await request.json();
+  try {
+    const body = await request.json();
+    const { to, templateName = "booking", time } = body;
 
-    try {
-        await client.messages
-            .create({
-                from: 'whatsapp:+14155238886',
-                contentSid: process.env.CONTENT_SID ?? "",
-                contentVariables: `{"1":"${message.service}","2":"${message.date}", "3":"${message.time}", "4":"${message.name}"}`,
-                to: 'whatsapp:+919910197196'
-            })
+    const payload = {
+      messaging_product: "whatsapp",
+      to: "919910197196",
+      type: "template",
+      template: {
+        name: templateName,
+        language: {
+          code: "en_US",
+        },
+        components: [
+          {
+            type: "body",
+            parameters: [
+              {
+                type: "text",
+                text: time,
+              },
+            ],
+          },
+        ],
+      },
+    };
 
-        return NextResponse.json({ success: true });
-    } catch (error) {
-        console.error(error);
-        return NextResponse.json({ success: false, error: 'Failed to send WhatsApp message' });
+    const response = await fetch(WHATSAPP_API_URL, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${ACCESS_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      return NextResponse.json(
+        { error: "Failed to send WhatsApp message", details: data },
+        { status: response.status }
+      );
     }
+
+    return NextResponse.json(
+      { success: true, message: "WhatsApp message sent successfully", data },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error("Error sending WhatsApp message:", error);
+    return NextResponse.json(
+      {
+        error: "Internal server error",
+        message: error instanceof Error ? error.message : "Unknown error",
+      },
+      { status: 500 }
+    );
+  }
 }
