@@ -43,16 +43,16 @@ export default function Booking() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        to: phone,
-        time: time,
+        to: phone.trim(),
+        time: `${time} at ${date.format("DD-MM-YYYY")}`,
       }),
     });
 
     const data = await res.json();
     if (data.success) {
-      alert("WhatsApp message sent!");
+      alert("Booking confirmed!");
     } else {
-      alert("Failed to send WhatsApp message.");
+      alert("Failed to confirm booking.");
     }
   };
 
@@ -167,14 +167,21 @@ export default function Booking() {
                 />
               </div>
               <FormControl style={{ width: "50%" }} error={!!errors?.time}>
-                <InputLabel>Time Slot</InputLabel>
-                <Select value={time} onChange={(e) => setTime(e.target.value)}>
+                <TextField
+                  id="standard-select-currency"
+                  select
+                  label="Select a time slot"
+                  defaultValue="EUR"
+                  variant="outlined"
+                  value={time}
+                  onChange={(e) => setTime(e.target.value)}
+                >
                   {timeSlots.map((item) => (
                     <MenuItem key={item.value} value={item.value}>
                       {item.value}
                     </MenuItem>
                   ))}
-                </Select>
+                </TextField>
                 {errors?.time && (
                   <Typography color="error">{errors?.time}</Typography>
                 )}

@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 const WHATSAPP_API_URL =
   "https://graph.facebook.com/v22.0/719265351278653/messages";
 const ACCESS_TOKEN =
-  "EAAQKi4POSjEBPfeAV0FCwuB4qf9esgEnxTGlr7RKfCGAVq6ZAllAkUi68OrDp9uvbPTNm8OahRFC11RCMUxGPzYERI9g3aQN0yeZBnBHfmXLvRG8ZB7CsTqKDDe9bfqSsvLC7Szb53nQMTqkTYjPuZAoFg9BRGZCZC0rLEF5FTf3ppAzXSxGXAjuKeiLhJxCNaLJSIkXoiCZC8VjT6Gna909MY7R7ugKB8rCNYxdaVNbgZDZD";
+  "EAAQKi4POSjEBPc7enwqvBecW37oZC71XaWC4rHFCTbeki9ZAHGqVkikNZBkleLnAUHST4f7TiGFOXy4b1nE9XcaHgbanVUR4XTCdaZCTMmmSeZAOfNYASgfPuL8pfQwrXDrsvZBkWM4vkTmbS2pyoCdZAa4AcuuPbZAdMTzjKIJdjVsoVlEdDhClUCL4MFCH0Hv4ZAybkJ3Q56hTGWSTuiB9pF8weXZC7XgYhmWHTKd8klLtgZD";
 
 export async function POST(request: Request) {
   try {
@@ -17,7 +17,7 @@ export async function POST(request: Request) {
       template: {
         name: templateName,
         language: {
-          code: "en_US",
+          code: "en",
         },
         components: [
           {
