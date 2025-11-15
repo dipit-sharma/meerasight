@@ -42,7 +42,7 @@ export default function Booking() {
 
     const message = `Hey, my name is ${name} I want to book an appointment for ${new Date(
       date
-    ).getDate()} for ${time} slot.`;
+    ).getDate()} for ${time} slot, for ${service}.`;
 
     // const data = await res.json();
     const url = new URL("https://wa.me/917428728458");
@@ -199,15 +199,6 @@ export default function Booking() {
                   <Typography color="error">{errors?.service}</Typography>
                 )}
               </FormControl>
-            </div>
-            <div style={{ width: "100%", marginTop: "12px" }}>
-              <div>Message</div>
-              <TextField
-                fullWidth
-                multiline
-                variant="standard"
-                placeholder="Message"
-              />
             </div>
           </div>
 
