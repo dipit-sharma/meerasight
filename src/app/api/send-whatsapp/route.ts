@@ -6,15 +6,15 @@ const authToken = process.env.AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 
 export async function POST(request: Request) {
-    const { message } = await request.json();
+    const { message, phone } = await request.json();
 
     try {
         await client.messages
             .create({
-                from: 'whatsapp:+14155238886',
+                from: 'whatsapp:+15557551662',
                 contentSid: process.env.CONTENT_SID ?? "",
                 contentVariables: `{"1":"${message.service}","2":"${message.date}", "3":"${message.time}", "4":"${message.name}"}`,
-                to: 'whatsapp:+919910197196'
+                to: `whatsapp:+91${phone}`
             })
 
         return NextResponse.json({ success: true });

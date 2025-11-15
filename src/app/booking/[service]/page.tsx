@@ -14,8 +14,8 @@ import { DateCalendar, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs from "dayjs";
 import { useParams } from "next/navigation";
-import { useState } from "react";
-import { timeSlots } from "./constants";
+import { useEffect, useState } from "react";
+import { timeSlots as normalSlot, sundaySlots } from "./constants";
 import "./style.css";
 
 export default function Booking() {
@@ -23,6 +23,9 @@ export default function Booking() {
   const { service: service_id } = params ?? {};
 
   const [date, setDate] = useState(dayjs(new Date()));
+  const [timeSlots, setSlot] = useState(
+    new Date().getDay() === 0 ? sundaySlots : normalSlot
+  );
   const [time, setTime] = useState(timeSlots[0].value);
   const [service, setService] = useState(
     services[Number(service_id) ?? 0].content
@@ -37,27 +40,14 @@ export default function Booking() {
       return;
     }
 
-    const res = await fetch("/api/send-whatsapp", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        message: {
-          date: dayjs(date).format("DD-MM-YYYY"),
-          time: time,
-          service: service,
-          name: name,
-        },
-      }),
-    });
+    const message = `Hey, my name is ${name} I want to book an appointment for ${new Date(
+      date
+    ).getDate()} for ${time} slot.`;
 
-    const data = await res.json();
-    if (data.success) {
-      alert("WhatsApp message sent!");
-    } else {
-      alert("Failed to send WhatsApp message.");
-    }
+    // const data = await res.json();
+    const url = new URL("https://wa.me/917428728458");
+    url.searchParams.append("text", message);
+    window.open(url, "_blank");
   };
 
   const validateForm = () => {
@@ -101,10 +91,18 @@ export default function Booking() {
     }
 
     setErrors(errors);
-    console.log(errors);
-
     return Object.keys(errors).length === 0;
   };
+
+  useEffect(() => {
+    const selectedDay = new Date(date).getDay();
+
+    if (selectedDay === 0) {
+      setSlot(sundaySlots);
+    } else {
+      setSlot(normalSlot);
+    }
+  }, [date]);
 
   return (
     <div className="booking">
