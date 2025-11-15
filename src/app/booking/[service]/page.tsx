@@ -169,14 +169,21 @@ export default function Booking() {
                 />
               </div>
               <FormControl style={{ width: "50%" }} error={!!errors?.time}>
-                <InputLabel>Time Slot</InputLabel>
-                <Select value={time} onChange={(e) => setTime(e.target.value)}>
+                <TextField
+                  id="standard-select-currency"
+                  select
+                  label="Select a time slot"
+                  defaultValue="EUR"
+                  variant="outlined"
+                  value={time}
+                  onChange={(e) => setTime(e.target.value)}
+                >
                   {timeSlots.map((item) => (
                     <MenuItem key={item.value} value={item.value}>
                       {item.value}
                     </MenuItem>
                   ))}
-                </Select>
+                </TextField>
                 {errors?.time && (
                   <Typography color="error">{errors?.time}</Typography>
                 )}
